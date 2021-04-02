@@ -1,0 +1,61 @@
+/*===========================
+
+Universal Styling
+
+===========================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+p {
+  font-family: sans-serif;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+/*===========================
+
+Heading Styling
+
+===========================*/
+header {
+    text-align: center;
+    background: #00000057;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #526496;
+  margin: 2px;
+  padding: 10px;
+  transition: .5s;
+  font-size: 25px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+
+nav a:hover {
+  color: #526496;
+  background: white;
+  transition: .3s;
+  border-bottom: 3px solid #526496;
+}
+
+nav ul li {
+    display: inline;
+}
+
+
+/*===========================
+
+Section Styling
+
+===========================*/
