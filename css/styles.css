@@ -12,11 +12,37 @@ Universal Styling
 }
 
 p {
-  font-family: sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 26px;
   margin-bottom: 20px;
 }
+
+.photo,
+.photo-float {
+    border: 5px solid black;
+    border-radius: 5px;
+    transition: 1s;
+    filter: grayscale(100%);
+    margin-right: 20px;
+}
+
+.photo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.photo:hover,
+.photo-float:hover {
+    transition: 1s;
+    filter: grayscale(0%);
+}
+
+.photo-float {
+    float: left;
+
+}
+
 
 /*===========================
 
@@ -25,18 +51,18 @@ Heading Styling
 ===========================*/
 header {
     text-align: center;
-    background: #00000057;
-    padding: 30px;
     position: fixed;
     width: 100%;
     z-index: 99999;
+    height: 100px;
+    background-color: #626262b8;
 }
 
 header nav a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  background: #526496;
+  background-color: #526496;
   margin: 2px;
   padding: 10px;
   transition: .5s;
@@ -47,16 +73,18 @@ header nav a {
 
 header nav a:hover {
   color: #526496;
-  background: white;
+  background-color: white;
   transition: .3s;
   border-bottom: 3px solid #526496;
 }
 
-header nav ul li {
-    display: inline;
+header nav ul {
+  padding: 30px;
 }
 
-
+header nav ul li {
+    display: inline-block;
+}
 /*===========================
 
 Main Styling
@@ -80,19 +108,18 @@ Top Section Styling
 .top {
   text-align: justify;
   margin: 0 45px 10px;
-  height: 100vh;
 }
 
 .top h1 {
   font-size: 50px;
   color: #526496;
-  text-transform: uppercase;
   margin-bottom: 20px;
   text-align: center;
+  font-family: 'Lobster', cursive;
 }
 
 .top span {
-  color: black;
+  color: #2b3c6c;
   font-size: 60px;
 }
 
@@ -102,20 +129,6 @@ Top Section Styling
     text-transform: uppercase;
 }
 
-.main-photo {
-    border: 5px solid black;
-    border-radius: 5px;
-    transition: 1s;
-    filter: grayscale(100%);
-    float: left;
-    margin-right: 20px;
-    width: 300px;
-}
-
-.main-photo:hover {
-    transition: 1s;
-    filter: grayscale(0%);
-}
 
 
 /*===========================
@@ -131,6 +144,7 @@ Three Column Section Styling
   padding: 40px;
   position: relative;
   text-align: center;
+  top: 50px;
 }
 
 .three-columns p {
@@ -139,12 +153,14 @@ Three Column Section Styling
 
 .three-columns h2 {
   text-align: left;
-  padding: 5px 0 0 5px;
+  padding: 0 0 1px 5px;
   margin: 10px 0;
-  color: white;
+  color: #2b3c6c;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px black;
-  background: gray;
+  background: white;
+  font-family: 'Noto Sans TC', sans-serif;
+  border-left: 5px solid #2b3c6c
 }
 
 .column-one,
@@ -163,4 +179,39 @@ Three Column Section Styling
 }
 .column-three {
   right: 20px;
+}
+
+
+/*===========================
+
+Animation Section Styling
+
+===========================*/
+
+.animation {
+  background-color: lightgray;
+  min-height: 500px;
+}
+
+.bottom {
+  position: relative;
+  top: 100px;
+  max-width: 50%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+}
+
+/*===========================
+
+Footer Section Styling
+
+===========================*/
+
+footer {
+  background-color: #526496;
+  padding: 50px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
 }
