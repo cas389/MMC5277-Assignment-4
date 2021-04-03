@@ -8,6 +8,7 @@ Universal Styling
   padding: 0;
   margin: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 p {
@@ -79,6 +80,7 @@ Top Section Styling
 .top {
   text-align: justify;
   margin: 0 45px 10px;
+  height: 100vh;
 }
 
 .top h1 {
@@ -118,49 +120,47 @@ Top Section Styling
 
 /*===========================
 
-Middle Section Styling
+Three Column Section Styling
 
 ===========================*/
 
-.middle-container {
+.three-columns {
   background-image: url("../images/flower-background.png");
   max-width: 100vw;
-  height: 400px;
+  height: 100vh;
   padding: 40px;
-}
-
-.middle-left h2,
-.middle-right h2 {
-  padding: 20px;
-  text-transform: uppercase;
-  color: #526496;
-  text-decoration: underline;
-  text-align: center;
-}
-
-.middle-left,
-.middle-right {
-  position: absolute;
-}
-
-.leaves-left {
   position: relative;
-  bottom: 50px;
-}
-
-.leaves-right {
-  position: absolute;
-  bottom: 250px;
-  right: 50px;
-}
-
-.middle-left {
-  max-width: 40%;
   text-align: center;
 }
 
-.middle-right {
-    top: 125px;
-    left: 800px;
-    width: 500px;
+.three-columns p {
+  text-align: left;
+}
+
+.three-columns h2 {
+  text-align: left;
+  padding: 5px 0 0 5px;
+  margin: 10px 0;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
+  background: gray;
+}
+
+.column-one,
+.column-two,
+.column-three {
+  width: 30%;
+  position: absolute;
+  background-color: lightgray;
+  padding: 25px;
+}
+.column-one {
+  left: 20px;
+}
+.column-two {
+  left: 35%;
+}
+.column-three {
+  right: 20px;
 }
