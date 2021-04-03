@@ -12,7 +12,8 @@ Universal Styling
 
 p {
   font-family: sans-serif;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 24px;
   margin-bottom: 20px;
 }
 
@@ -27,9 +28,10 @@ header {
     padding: 30px;
     position: fixed;
     width: 100%;
+    z-index: 99999;
 }
 
-nav a {
+header nav a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -42,20 +44,58 @@ nav a {
   letter-spacing: 2px;
 }
 
-nav a:hover {
+header nav a:hover {
   color: #526496;
   background: white;
   transition: .3s;
   border-bottom: 3px solid #526496;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
 }
 
 
 /*===========================
 
-Section Styling
+Main Styling
 
 ===========================*/
+main {
+    padding-top: 100px;
+    background-color: lightgray;
+    padding: 100px 20px 20px;
+    min-height: 100vh;
+}
+
+.top {
+  text-align: center;
+}
+
+.top h1 {
+  font-size: 50px;
+  color: #526496;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.top p::first-line {
+    color: #526496;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.main-photo {
+    border: 5px solid black;
+    border-radius: 5px;
+    transition: 1s;
+    filter: grayscale(100%);
+    float: left;
+    margin-right: 20px;
+}
+
+.main-photo:hover {
+    transition: 1s;
+    filter: grayscale(0%);
+}
